@@ -1,11 +1,11 @@
-About pyramid_mako
-==================
+About pyramid_mako-feedstock
+============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyramid_mako-feedstock/blob/main/LICENSE.txt)
 
 Home: https://trypyramid.com
 
 Package license: LicenseRef-Pylons
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyramid_mako-feedstock/blob/master/LICENSE.txt)
 
 Summary: The Pyramid Web Framework, a Pylons project
 
@@ -17,10 +17,11 @@ Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table><tr>
+    <td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=12109&branchName=master">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyramid_mako-feedstock?branchName=master">
+      <a href="https://github.com/conda-forge/pyramid_mako-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/pyramid_mako-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
       </a>
     </td>
   </tr>
@@ -31,7 +32,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-pyramid_mako-green.svg)](https://anaconda.org/conda-forge/pyramid_mako) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyramid_mako.svg)](https://anaconda.org/conda-forge/pyramid_mako) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyramid_mako.svg)](https://anaconda.org/conda-forge/pyramid_mako) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyramid_mako.svg)](https://anaconda.org/conda-forge/pyramid_mako) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pyramid__mako-green.svg)](https://anaconda.org/conda-forge/pyramid_mako) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyramid_mako.svg)](https://anaconda.org/conda-forge/pyramid_mako) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyramid_mako.svg)](https://anaconda.org/conda-forge/pyramid_mako) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyramid_mako.svg)](https://anaconda.org/conda-forge/pyramid_mako) |
 
 Installing pyramid_mako
 =======================
@@ -40,25 +41,97 @@ Installing `pyramid_mako` from the `conda-forge` channel can be achieved by addi
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `pyramid_mako` can be installed with:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install pyramid_mako
 ```
 
-It is possible to list all of the versions of `pyramid_mako` available on your platform with:
+</details>
+
+<details>
+<summary>With mamba</summary>
+
+```
+mamba install pyramid_mako
+```
+
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add pyramid_mako
+# for installing globally
+pixi global install pyramid_mako
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `pyramid_mako` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search pyramid_mako --channel conda-forge
 ```
 
+</details>
+
+<details>
+<summary>With mamba</summary>
+
+```
+mamba search pyramid_mako --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search pyramid_mako --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
+
+```
+# Search all versions available on your platform:
+mamba repoquery search pyramid_mako --channel conda-forge
+
+# List packages depending on `pyramid_mako`:
+mamba repoquery whoneeds pyramid_mako --channel conda-forge
+
+# List dependencies of `pyramid_mako`:
+mamba repoquery depends pyramid_mako --channel conda-forge
+```
+
+</details>
+
+
 
 About conda-forge
 =================
 
-[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
+[![Powered by
+NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](https://numfocus.org)
 
 conda-forge is a community-led conda channel of installable packages.
 In order to provide high-quality builds, the process has been automated into the
@@ -68,17 +141,17 @@ for each of the installable packages. Such a repository is known as a *feedstock
 A feedstock is made up of a conda recipe (the instructions on what and how to build
 the package) and the necessary configurations for automatic building using freely
 available continuous integration services. Thanks to the awesome service provided by
-[CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/)
-and [TravisCI](https://travis-ci.com/) it is possible to build and upload installable
-packages to the [conda-forge](https://anaconda.org/conda-forge)
-[Anaconda-Cloud](https://anaconda.org/) channel for Linux, Windows and OSX respectively.
+[Azure](https://azure.microsoft.com/en-us/services/devops/) and [GitHub](https://github.com/)
+it is possible to build and upload installable packages to the
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
+channel for Linux, Windows and OSX respectively.
 
-To manage the continuous integration and simplify feedstock maintenance
+To manage the continuous integration and simplify feedstock maintenance,
 [conda-smithy](https://github.com/conda-forge/conda-smithy) has been developed.
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
-For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
+For more information, please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
@@ -105,7 +178,7 @@ merged, the recipe will be re-built and uploaded automatically to the
 everybody to install and use from the `conda-forge` channel.
 Note that all branches in the conda-forge/pyramid_mako-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
-on branches in forks and branches in the main repository should only be used to
+on branches in forks, and branches in the main repository should only be used to
 build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
