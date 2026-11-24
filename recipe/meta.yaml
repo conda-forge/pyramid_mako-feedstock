@@ -1,13 +1,13 @@
 {% set name = "pyramid_mako" %}
-{% set version = "1.1.0" %}
+{% set version = "1.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0066c863441f1c3ddea60cee1ccc50d00a91a317a8052ca44131da1a12a840e2
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: e9c8da55a2235d0acd85c49301b1c9ddde225d0bf53afcf880a08d844125ec1e
 
 build:
   noarch: python
